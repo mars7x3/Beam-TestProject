@@ -6,7 +6,7 @@ from django.conf import settings
 
 
 def create_product_images(product_id, images_list):
-    create_list = [ProductImage(product=product_id, image=image) for image in images_list]
+    create_list = [ProductImage(product_id=product_id, image=image) for image in images_list]
     ProductImage.objects.bulk_create(create_list)
 
 
